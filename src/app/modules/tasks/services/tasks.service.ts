@@ -6,7 +6,9 @@ import { BaseDataManagerService } from '../../shared/services/base-data-manager.
 import { v4 as uuidv4 } from 'uuid';
 import { MOCK_TASKS_DATA } from '../../../mocks/tasks.mock';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TasksService extends BaseDataManagerService<Task> {
 
   constructor() {

@@ -5,7 +5,7 @@ import { map, Observable, take } from 'rxjs';
 import { BaseDataManagerService } from '../../shared/services/base-data-manager.service';
 import { MOCK_USERS_DATA } from '../../../mocks/users.mock';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class UsersService extends BaseDataManagerService<User> {
   constructor() {
     super();

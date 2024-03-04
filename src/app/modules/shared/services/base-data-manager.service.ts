@@ -1,4 +1,4 @@
-import { BehaviorSubject, delay, map, Observable, of, switchMap, take, tap, throwError } from 'rxjs';
+import { BehaviorSubject, delay, map, Observable, of, shareReplay, switchMap, take, tap, throwError } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
 
 export abstract class BaseDataManagerService<T extends {id: string}> {

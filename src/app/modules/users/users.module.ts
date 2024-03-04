@@ -53,7 +53,6 @@ import { UsersService } from './services/users.service';
     LoadingDataContainerComponent
   ],
   providers: [
-    UsersService,
     UserResolver
   ]
 })

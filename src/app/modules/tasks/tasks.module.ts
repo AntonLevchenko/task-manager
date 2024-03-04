@@ -69,7 +69,6 @@ import { NoTasksFoundComponent } from './components/no-tasks-found/no-tasks-foun
     MatProgressBar
   ],
   providers: [
-    TasksService,
     TaskResolver
   ]
 })
