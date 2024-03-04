@@ -24,7 +24,7 @@ export class TasksListComponent {
 
   public deleteTask(id: string) {
     this.tasksService.delete(id).subscribe(() => {
-      this.snackbarManagerService.openSnackBar('Task has been updated');
+      this.snackbarManagerService.openSnackBar('Task has been deleted');
     });
   }
 
