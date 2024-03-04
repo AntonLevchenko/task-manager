@@ -16,7 +16,7 @@ jobs:
           build_configuration: production
           base_href: https://github.com/AntonLevchenko/task-manager/
           deploy_branch: gh-pages
-          angular_dist_build_folder: dist/tasks-manager/browser
+          angular_dist_build_folder: dist/tasks-manager
 
 permissions:
   contents: write
