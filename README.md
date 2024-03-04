@@ -1,4 +1,5 @@
 # TasksManager
+App url: https://antonlevchenko.github.io/task-manager/users
 
 This project uses Angular version 17.2.2.
 
