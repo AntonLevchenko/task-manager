@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ user.name }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-list *ngIf="assignedTasks?.length">
+    <div mat-subheader>Assigned Tasks</div>
+    <mat-list-item *ngFor="let task of assignedTasks, trackBy: trackById">
+      <mat-icon matListItemIcon>task</mat-icon>
+      <div matListItemTitle>{{task.name}}</div>
+      <div matListItemLine>{{task.status}}</div>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-card-actions>
+    <button mat-button (click)="onEditUser()">Edit</button>
+    <button mat-button (click)="onDeleteUser()">Delete</button>
+  </mat-card-actions>
+</mat-card>

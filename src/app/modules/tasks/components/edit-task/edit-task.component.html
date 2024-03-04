@@ -1,0 +1,4 @@
+<h1>Edit User</h1>
+<ng-container *ngIf="task$ | async as taskData">
+  <app-task-form [task]="taskData" (onSubmit)="onEditTask(taskData.id, $event)"></app-task-form>
+</ng-container>

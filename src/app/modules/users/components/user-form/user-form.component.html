@@ -1,0 +1,12 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+  <app-input [control]="userForm.controls.name"
+             errorMessage="Name field is required"
+             label="User Name"
+  ></app-input>
+
+  <div class="control-row">
+    <button type="submit"
+            mat-raised-button color="primary"
+            [disabled]="!userForm.valid">Submit</button>
+  </div>
+</form>

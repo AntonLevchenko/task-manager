@@ -1,0 +1,16 @@
+<mat-toolbar-row>
+  <h1>Users</h1>
+  <span class="spacer"></span>
+  <button mat-raised-button color="primary" (click)="createNewUser()">Create a new user</button>
+</mat-toolbar-row>
+
+<app-loading-data-container [data$]="users$">
+  <app-user-card list
+                 *ngFor="let user of users$ | async, trackBy: trackById"
+                 [user]="user"
+                 [assignedTasks]="getAssignedTask(user.id) | async"
+                 (onDelete)="deleteUser(user.id)"
+                 (onEdit)="editUser(user.id)"
+  ></app-user-card>
+  <app-no-users-found noData></app-no-users-found>
+</app-loading-data-container>

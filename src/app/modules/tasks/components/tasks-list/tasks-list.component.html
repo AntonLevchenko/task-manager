@@ -1,0 +1,15 @@
+<mat-toolbar-row>
+  <h1>Tasks</h1>
+  <span class="spacer"></span>
+  <button mat-raised-button color="primary" (click)="createTask()">Create a new task</button>
+</mat-toolbar-row>
+<app-loading-data-container [data$]="tasks$">
+  <app-task-card list
+                 *ngFor="let task of tasks$ | async, trackBy: trackById"
+                 [task]="task"
+                 (onDelete)="deleteTask(task.id)"
+                 (onEdit)="editTask(task.id)"
+                 (onAssignUserById)="assignUserById(task.id, $event)"
+  ></app-task-card>
+  <app-no-tasks-found noData></app-no-tasks-found>
+</app-loading-data-container>

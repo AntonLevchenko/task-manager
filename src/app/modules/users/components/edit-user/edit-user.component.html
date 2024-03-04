@@ -1,0 +1,4 @@
+<h1>Edit User</h1>
+<ng-container *ngIf="user | async as userData">
+  <app-user-form [user]="userData" (onSubmit)="onEditUser(userData.id, $event)"></app-user-form>
+</ng-container>

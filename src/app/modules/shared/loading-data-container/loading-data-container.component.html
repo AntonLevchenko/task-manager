@@ -1,0 +1,11 @@
+<ng-container *ngIf="data$ | async as data else loader">
+    <ng-container *ngIf="data.length else noData">
+        <ng-content select="[list]"></ng-content>
+    </ng-container>
+    <ng-template #noData>
+        <ng-content select="[noData]"></ng-content>
+    </ng-template>
+</ng-container>
+<ng-template #loader>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

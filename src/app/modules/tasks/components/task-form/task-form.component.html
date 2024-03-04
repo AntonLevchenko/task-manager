@@ -1,0 +1,19 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmitForm()">
+  <div class="control-row">
+    <app-input [control]="taskForm.controls.name"
+               errorMessage="Name field is required"
+               label="Task Name"
+    ></app-input>
+  </div>
+  <div class="control-row">
+    <app-input [control]="taskForm.controls.description"
+               errorMessage="Description field is required"
+               label="Description"
+    ></app-input>
+  </div>
+  <div class="control-row">
+    <button type="submit"
+            mat-raised-button color="primary"
+            [disabled]="!taskForm.valid">Submit</button>
+  </div>
+</form>
